@@ -22,7 +22,7 @@
         </nav>
         <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="language.label">
             <button type="button" data-language="en" aria-label="Switch to English" data-i18n-aria-label="language.switchEnglish" aria-pressed="true">EN</button>
-            <button type="button" data-language="hi" aria-label="Switch to Hindi" data-i18n-aria-label="language.switchHindi" aria-pressed="false">हि</button>
+            <button type="button" data-language="hi" aria-label="Switch to Hindi" data-i18n-aria-label="language.switchHindi" aria-pressed="false">हिन्दी</button>
         </div>
     </header>
     <main class="page">
@@ -44,7 +44,34 @@
                 <span class="contact-icon" aria-hidden="true">f</span>
                 <span><span class="contact-label" data-i18n="contact.facebook">Facebook page</span><strong data-i18n="contact.facebookAction">Visit Facebook</strong></span>
             </a>
-        </div>
+        </section>
+        <section class="contact-location" aria-label="Temple address and map" data-i18n-aria-label="contact.location">
+            <article class="card address-card">
+                <h2 data-i18n="contact.address">Address</h2>
+                <dl class="address-list">
+                    <div><dt data-i18n="contact.village">Village</dt><dd>Chhatneshwar</dd></div>
+                    <div><dt data-i18n="contact.postOffice">Post Office</dt><dd>Chhatneshwar</dd></div>
+                    <div><dt data-i18n="contact.district">District</dt><dd>Samastipur</dd></div>
+                    <div><dt data-i18n="contact.state">State</dt><dd>Bihar</dd></div>
+                    <div><dt data-i18n="contact.taluka">Tehsil / Taluka</dt><dd>Warisnagar</dd></div>
+                    <div><dt data-i18n="contact.pinCode">PIN Code</dt><dd>848301</dd></div>
+                </dl>
+            </article>
+            <article class="card map-card">
+                <h2 data-i18n="map.title">Visit Us</h2>
+                <p data-i18n="map.place">Chhatneshwar Durga Mandir</p>
+                <iframe
+                    class="location-map"
+                    title="Interactive map to Chhatneshwar Durga Mandir"
+                    data-i18n-title="map.frame"
+                    src="https://maps.google.com/maps?q=25.91313%2C85.85361&amp;z=17&amp;output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+                <a class="map-link" href="https://maps.app.goo.gl/7wcgCSToQfkQmfAQ7" target="_blank" rel="noopener noreferrer" data-i18n="map.directions">Open in Google Maps</a>
+            </article>
+        </section>
     </main>
     <footer>&copy; <span class="year">2026</span> <span data-i18n="footer.text">Chhatneshwar Durga Mandir | Samastipur, Bihar</span></footer>
 </body>

@@ -24,6 +24,9 @@ html {
 }
 
 body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 	margin: 0;
 	background-color: var(--color-paper);
 	background-image:
@@ -37,6 +40,10 @@ body {
 
 a {
 	color: var(--color-temple-dark);
+}
+
+main {
+	flex: 1 0 auto;
 }
 
 a:focus-visible,
@@ -327,6 +334,48 @@ h1 {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 1rem;
 	max-width: 62rem;
+}
+
+.contact-location {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+	gap: 1rem;
+	max-width: 62rem;
+	margin-top: 1rem;
+}
+
+.address-card h2 {
+	margin-top: 0;
+}
+
+.address-list {
+	display: grid;
+	gap: 0.75rem;
+	margin: 0;
+}
+
+.address-list > div {
+	display: grid;
+	grid-template-columns: minmax(7.5rem, 0.8fr) minmax(0, 1.2fr);
+	gap: 0.75rem;
+	padding-bottom: 0.55rem;
+	border-bottom: 1px solid rgb(105 58 40 / 12%);
+}
+
+.address-list > div:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.address-list dt {
+	color: var(--color-muted);
+	font-family: Arial, sans-serif;
+	font-size: 0.9rem;
+}
+
+.address-list dd {
+	margin: 0;
+	font-weight: 700;
 }
 
 .contact-method {
@@ -637,7 +686,7 @@ h1 {
 }
 
 footer {
-	margin-top: 2rem;
+	margin-top: auto;
 	padding: 1.25rem;
 	background: #292522;
 	color: white;
@@ -683,6 +732,10 @@ footer {
 	}
 
 	.contact-options {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.contact-location {
 		grid-template-columns: minmax(0, 1fr);
 	}
 }
