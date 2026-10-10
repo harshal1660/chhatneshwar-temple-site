@@ -12,6 +12,11 @@ const translations = {
         "language.label": "Language",
         "language.switchEnglish": "Switch to English",
         "language.switchHindi": "Switch to Hindi",
+        "site.brand": "Durga Temple, Chhatneshwar",
+        "site.anniversary": "250 Years",
+        "invitation.title": "Program invitation",
+        "invitation.close": "Close invitation",
+        "invitation.alt": "Invitation to the temple program",
         "nav.label": "Main navigation",
         "nav.home": "Home",
         "nav.about": "About",
@@ -76,7 +81,7 @@ const translations = {
         "story.worship.heading": "Temple Foundations and Worship",
         "story.worship.one": "Local accounts say artisans of the Darbhanga Maharaja made the idol, and accomplished priests from Darbhanga began the worship.",
         "story.worship.two": "Since then, Maa Durga has been worshipped through the customs established by the ancestors and carried forward across generations.",
-        "story.worship.three": "Today, Ratendra Kishore, Vishnukant Karn, Sachindra Karn and head priest Satyadev Prasad Karn continue this tradition through worship and religious observances.",
+        "story.worship.three": "Currently, the family of Lakshmi Dutt Lal Das is carrying forward this sacred tradition through proper rites and religious ceremonies.",
         "story.sixth.heading": "The Shashthi-to-Saptami Tradition",
         "story.sixth.one": "The sequence of worship on Shashthi and Saptami holds a special place in the temple's tradition.",
         "story.sixth.two": "According to custom, Maa Durga is formally invited on Shashthi beneath a sacred bel tree some distance from the temple.",
@@ -86,8 +91,8 @@ const translations = {
         "story.ashtami.one": "Maha Ashtami and Maha Navami are especially significant at Chhatneshwar Durga Mandir. Large numbers of devotees travel from near and far to offer prayers and seek the Goddess's darshan on these days.",
         "story.ashtami.two": "Local tradition describes goat sacrifice in large numbers on these days as part of the temple's old observance.",
         "story.faith.heading": "Faith Carried Across Generations",
-        "story.faith.one": "The worship begun in 1845 has connected devotees for nearly 180 years.",
-        "story.faith.two": "This siddhpeeth is more than a place of worship; it is a shared heritage of families, temple servants and the whole village.",
+        "story.faith.one": "The worship of Maa Durga, which began in Chhatneshwar village, has been connecting devotees for approximately 250 years.",
+        "story.faith.two": "This siddhpeeth is more than a place of worship, it is a shared heritage of families, temple servants and the whole village.",
         "story.faith.three": "During Navratri, worship, devotion and community participation bring a special energy to Chhatneshwar.",
         "story.heritage.heading": "Chhatneshwar's Shared Heritage",
         "story.heritage.text": "Connected to Mithila's cultural traditions, the region continues to cherish religious festivals, folk customs and family observances. Alongside devotion to Maa Durga, education, social unity, ties with residents living away and love for one's roots are all part of Chhatneshwar's identity.",
@@ -133,6 +138,11 @@ const translations = {
         "language.label": "भाषा",
         "language.switchEnglish": "अंग्रेज़ी में बदलें",
         "language.switchHindi": "हिंदी में बदलें",
+        "site.brand": "दुर्गा मंदिर, छतनेश्वर",
+        "site.anniversary": "250 वर्ष",
+        "invitation.title": "कार्यक्रम का निमंत्रण",
+        "invitation.close": "निमंत्रण बंद करें",
+        "invitation.alt": "मंदिर के कार्यक्रम का निमंत्रण",
         "nav.label": "मुख्य नेविगेशन",
         "nav.home": "होम",
         "nav.about": "परिचय",
@@ -197,7 +207,7 @@ const translations = {
         "story.worship.heading": "🛕 स्थापना और पूजा की परंपरा",
         "story.worship.one": "स्थानीय वर्णन के अनुसार, प्रतिमा का निर्माण दरभंगा महाराज के शिल्पकारों ने किया और वहीं के पुरोहितों ने पूजा-अर्चना आरंभ कराई।",
         "story.worship.two": "तब से मां दुर्गा की आराधना पूर्वजों द्वारा स्थापित रीति के अनुसार पीढ़ी-दर-पीढ़ी चलती आई है।",
-        "story.worship.three": "आज रतेन्द्र किशोर, विष्णुकांत कर्ण, सचीन्द्र कर्ण और मुख्य पुजारी सत्यदेव प्रसाद कर्ण इस परंपरा को पूजा और धार्मिक अनुष्ठानों के माध्यम से आगे बढ़ा रहे हैं।",
+        "story.worship.three": "वर्तमान में, लक्ष्मी दत्त लाल दास का परिवार पूरे विधि-विधान और धार्मिक अनुष्ठानों के साथ इस पावन परंपरा का निर्वहन कर रहा है।",
         "story.sixth.heading": "🌿 षष्ठी से सप्तमी तक विशेष विधान",
         "story.sixth.one": "छतनेश्वर दुर्गा मंदिर की पूजा-पद्धति में षष्ठी और सप्तमी का क्रम विशेष स्थान रखता है।",
         "story.sixth.two": "परंपरा के अनुसार, मंदिर से कुछ दूरी पर स्थित पवित्र बेल वृक्ष के नीचे षष्ठी के दिन मां को विधिवत आमंत्रित किया जाता है।",
@@ -207,7 +217,7 @@ const translations = {
         "story.ashtami.one": "छतनेश्वर दुर्गा मंदिर में महाष्टमी एवं महानवमी का विशेष महत्व है। इन दोनों दिनों में दूर-दूर से बड़ी संख्या में श्रद्धालु मां के दर्शन और पूजा-अर्चना के लिए पहुंचते हैं।",
         "story.ashtami.two": "स्थानीय परंपरा में इन दिनों बड़ी संख्या में छागड़ की बलि का उल्लेख मिलता है; यह मंदिर की पुरानी पूजा-पद्धति का हिस्सा रहा है।",
         "story.faith.heading": "🌸 पीढ़ियों से चली आ रही श्रद्धा",
-        "story.faith.one": "1845 से आरंभ हुई मां दुर्गा की आराधना लगभग 180 वर्षों से श्रद्धालुओं को जोड़ती आई है।",
+        "story.faith.one": "छतनेश्वर गांव में शुरू हुई मां दुर्गा की यह पूजा लगभग 250 वर्षों से श्रद्धालुओं की आस्था का केंद्र बनी हुई है।",
         "story.faith.two": "यह सिद्धपीठ केवल पूजा का स्थान नहीं, बल्कि परिवारों, सेवकों और पूरे गांव की साझा विरासत है।",
         "story.faith.three": "नवरात्रि में भक्ति, पूजा और सामुदायिक सहभागिता से छतनेश्वर का वातावरण विशेष रूप से जीवंत हो उठता है।",
         "story.heritage.heading": "🪷 छतनेश्वर की साझी पहचान",
@@ -441,3 +451,18 @@ try {
     savedLanguage = "en";
 }
 applyLanguage(savedLanguage);
+
+const invitationDialog = document.querySelector("#invitation-dialog");
+const invitationClose = invitationDialog?.querySelector(".invitation-close");
+let invitationTimer;
+
+if (invitationDialog instanceof HTMLDialogElement) {
+    invitationDialog.showModal();
+    invitationTimer = window.setTimeout(() => invitationDialog.close(), 20_000);
+
+    invitationClose?.addEventListener("click", () => invitationDialog.close());
+    invitationDialog.addEventListener("click", (event) => {
+        if (event.target === invitationDialog) invitationDialog.close();
+    });
+    invitationDialog.addEventListener("close", () => window.clearTimeout(invitationTimer));
+}
