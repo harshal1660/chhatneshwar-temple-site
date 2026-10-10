@@ -765,10 +765,36 @@ footer {
 @media (max-width: 640px) {
 	.header {
 		justify-content: center;
+		gap: 0.4rem 0.75rem;
+		padding-inline: 0.75rem;
 	}
 
 	.brand-group {
 		justify-content: center;
+		gap: 0.35rem;
+	}
+
+	.logo {
+		font-size: 1.05rem;
+	}
+
+	.logo-anniversary {
+		padding: 0.15rem 0.4rem;
+		font-size: 0.62rem;
+	}
+
+	.nav {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.nav a {
+		padding: 0.35rem 0.48rem;
+		font-size: 0.75rem;
+	}
+
+	.language-switch {
+		margin-inline: auto;
 	}
 
 	.slider {
