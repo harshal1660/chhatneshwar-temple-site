@@ -50,11 +50,11 @@ const translations = {
         "map.place": "Chhatneshwar Durga Mandir",
         "map.frame": "Interactive map to Chhatneshwar Durga Mandir",
         "map.directions": "Open in Google Maps",
-        "qr.label": "Temple donation QR code",
+        "qr.label": "Donation for Durga Puja QR code",
         "qr.hide": "Hide QR",
         "qr.show": "Show QR",
-        "qr.alt": "UPI payment QR code for Chhatneshwar Durga Mandir",
-        "qr.caption": "Scan to support the temple",
+        "qr.alt": "UPI payment QR code for donation to Chhatneshwar Durga Puja",
+        "qr.caption": "Scan to donate for Durga Puja",
         "qr.pay": "Pay via UPI",
         "qr.payAction": "Open a UPI payment app",
         "qr.id": "UPI ID: 9967730356@ptaxis",
@@ -176,11 +176,11 @@ const translations = {
         "map.place": "छतनेश्वर दुर्गा मंदिर",
         "map.frame": "छतनेश्वर दुर्गा मंदिर का इंटरैक्टिव नक्शा",
         "map.directions": "Google Maps में खोलें",
-        "qr.label": "मंदिर के लिए दान QR कोड",
+        "qr.label": "दुर्गा पूजा के लिए दान QR कोड",
         "qr.hide": "QR छिपाएं",
         "qr.show": "QR दिखाएं",
-        "qr.alt": "छतनेश्वर दुर्गा मंदिर के लिए UPI भुगतान QR कोड",
-        "qr.caption": "मंदिर के सहयोग के लिए स्कैन करें",
+        "qr.alt": "छतनेश्वर दुर्गा पूजा के लिए दान UPI भुगतान QR कोड",
+        "qr.caption": "दुर्गा पूजा के लिए दान करने के लिए स्कैन करें",
         "qr.pay": "UPI से भुगतान करें",
         "qr.payAction": "UPI भुगतान ऐप खोलें",
         "qr.id": "UPI ID: 9967730356@ptaxis",
@@ -458,7 +458,7 @@ let invitationTimer;
 
 if (invitationDialog instanceof HTMLDialogElement) {
     invitationDialog.showModal();
-    invitationTimer = window.setTimeout(() => invitationDialog.close(), 20_000);
+    invitationTimer = window.setTimeout(() => invitationDialog.close(), 5_000);
 
     invitationClose?.addEventListener("click", () => invitationDialog.close());
     invitationDialog.addEventListener("click", (event) => {
