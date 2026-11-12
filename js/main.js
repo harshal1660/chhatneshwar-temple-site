@@ -506,7 +506,6 @@ if (gallery2026) {
 
     [
         "WhatsApp Video 2026-10-31 at 12.06.37 AM.mp4",
-        "WhatsApp Video 2026-10-31 at 12.06.38 AM.mp4",
         "WhatsApp Video 2026-10-31 at 12.06.38 AM (1).mp4",
         "WhatsApp Video 2026-11-12 at 10.01.30 PM.mp4"
     ].forEach((filename) => {
