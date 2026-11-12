@@ -104,6 +104,8 @@ const translations = {
         "gallery.meta": "Photographs of Chhatneshwar village, its temple and community celebrations in Samastipur, Bihar.",
         "gallery.title": "Village Gallery | Chhatneshwar Durga Mandir",
         "gallery.heading": "Village Gallery",
+        "gallery.yearOptions": "Gallery year",
+        "gallery.videoAlt": "Community celebration video from Chhatneshwar, 2026",
         "gallery.templeAlt": "Chhatneshwar Durga Mandir",
         "gallery.photoAlt": "A photograph from Chhatneshwar village",
         "gallery.newPhoto3978": "The temple entrance illuminated at dusk",
@@ -230,6 +232,8 @@ const translations = {
         "gallery.meta": "समस्तीपुर, बिहार के छतनेश्वर गांव, मंदिर और सामुदायिक उत्सवों की तस्वीरें।",
         "gallery.title": "गांव की गैलरी | छतनेश्वर दुर्गा मंदिर",
         "gallery.heading": "गांव की गैलरी",
+        "gallery.yearOptions": "गैलरी का वर्ष",
+        "gallery.videoAlt": "छतनेश्वर का 2026 का सामुदायिक उत्सव वीडियो",
         "gallery.templeAlt": "छतनेश्वर दुर्गा मंदिर",
         "gallery.photoAlt": "छतनेश्वर गांव की एक तस्वीर",
         "gallery.newPhoto3978": "संध्या की रोशनी में मंदिर का प्रवेश-द्वार",
@@ -308,6 +312,7 @@ function applyLanguage(language) {
     if (slides.length) showSlide(currentSlide);
     syncAutoplay();
 
+    const qrToggle = document.querySelector(".qr-toggle");
     if (qrToggle) {
         const expanded = qrToggle.getAttribute("aria-expanded") === "true";
         const key = expanded ? "qr.hide" : "qr.show";
@@ -410,18 +415,153 @@ qrToggle?.addEventListener("click", () => {
 */
 
 const gallery = document.querySelector(".gallery");
+const gallery2026 = document.querySelector(".gallery-2026");
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = document.querySelector("#lightbox-image");
 
-if (gallery && lightbox && lightboxImage) {
-    gallery.addEventListener("click", (event) => {
-        const item = event.target.closest(".gallery-item");
-        const image = item?.querySelector("img");
-        if (!image) return;
+const gallery2026Images = [
+    "WhatsApp Image 2026-10-31 at 12.06.18 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.18 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.18 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.21 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.21 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.21 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.21 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.22 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.22 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.22 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.23 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.23 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.23 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.23 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.24 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.24 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.24 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.24 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.25 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.25 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.25 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.25 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.26 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.26 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.26 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.26 AM (4).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.26 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.27 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.27 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.27 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.27 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.28 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.28 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.28 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.28 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.29 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.29 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.29 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.29 AM (4).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.29 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.30 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.30 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.30 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.30 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.31 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.31 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.31 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.31 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.32 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.32 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.32 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.32 AM (4).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.32 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.33 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.35 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.35 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.36 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.36 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.36 AM (3).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.36 AM (4).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.36 AM.jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.37 AM (1).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.37 AM (2).jpeg",
+    "WhatsApp Image 2026-10-31 at 12.06.37 AM.jpeg"
+];
 
-        lightboxImage.src = item.dataset.full || image.currentSrc || image.src;
-        lightboxImage.alt = image.alt;
-        lightbox.showModal();
+if (gallery2026) {
+    gallery2026Images.forEach((filename) => {
+        const item = document.createElement("button");
+        const image = document.createElement("img");
+        const source = `2026/${filename}`;
+
+        item.className = "gallery-item";
+        item.type = "button";
+        item.dataset.i18nAriaLabel = "gallery.viewPhoto";
+        item.dataset.full = source;
+        image.src = source;
+        image.dataset.i18nAlt = "gallery.photoAlt";
+        image.loading = "lazy";
+        image.decoding = "async";
+        item.append(image);
+        gallery2026.append(item);
+    });
+
+    [
+        "WhatsApp Video 2026-10-31 at 12.06.37 AM.mp4",
+        "WhatsApp Video 2026-10-31 at 12.06.38 AM.mp4"
+    ].forEach((filename) => {
+        const item = document.createElement("div");
+        const video = document.createElement("video");
+        const source = document.createElement("source");
+
+        item.className = "gallery-video";
+        video.controls = true;
+        video.preload = "metadata";
+        video.dataset.i18nAriaLabel = "gallery.videoAlt";
+        source.src = `2026/${filename}`;
+        source.type = "video/mp4";
+        video.append(source);
+        item.append(video);
+        gallery2026.append(item);
+    });
+}
+
+const galleryTabs = [...document.querySelectorAll("[role='tab'][aria-controls^='gallery-panel-']")];
+galleryTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        galleryTabs.forEach((otherTab) => {
+            const selected = otherTab === tab;
+            otherTab.setAttribute("aria-selected", String(selected));
+            otherTab.tabIndex = selected ? 0 : -1;
+            document.getElementById(otherTab.getAttribute("aria-controls")).hidden = !selected;
+        });
+    });
+
+    tab.addEventListener("keydown", (event) => {
+        const currentIndex = galleryTabs.indexOf(tab);
+        let nextIndex;
+
+        if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % galleryTabs.length;
+        if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + galleryTabs.length) % galleryTabs.length;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = galleryTabs.length - 1;
+        if (nextIndex === undefined) return;
+
+        event.preventDefault();
+        galleryTabs[nextIndex].click();
+        galleryTabs[nextIndex].focus();
+    });
+});
+
+if (gallery && lightbox && lightboxImage) {
+    document.querySelectorAll(".gallery").forEach((yearGallery) => {
+        yearGallery.addEventListener("click", (event) => {
+            const item = event.target.closest(".gallery-item");
+            const image = item?.querySelector("img");
+            if (!image) return;
+
+            lightboxImage.src = item.dataset.full || image.currentSrc || image.src;
+            lightboxImage.alt = image.alt;
+            lightbox.showModal();
+        });
     });
 
     document.querySelector(".lightbox-close")?.addEventListener("click", () => {

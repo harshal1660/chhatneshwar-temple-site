@@ -32,6 +32,11 @@
     </header>
     <main class="page">
         <h1 data-i18n="gallery.heading">Village Gallery</h1>
+        <div class="gallery-years" role="tablist" aria-label="Gallery year" data-i18n-aria-label="gallery.yearOptions">
+            <button id="gallery-tab-2025" type="button" role="tab" aria-selected="true" aria-controls="gallery-panel-2025">2025</button>
+            <button id="gallery-tab-2026" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel-2026" tabindex="-1">2026</button>
+        </div>
+        <section id="gallery-panel-2025" role="tabpanel" aria-labelledby="gallery-tab-2025">
         <div class="gallery">
             <button class="gallery-item reveal" type="button" aria-label="View temple photograph" data-i18n-aria-label="gallery.viewTemple" data-full="assets/1.jpg">
                 <img src="assets/optimized/temple-400.jpg" srcset="assets/optimized/temple-400.jpg 400w, assets/optimized/temple-800.jpg 800w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" width="400" height="533" loading="lazy" decoding="async" alt="Chhatneshwar Durga Mandir" data-i18n-alt="gallery.templeAlt">
@@ -70,6 +75,10 @@
                 <img src="assets/1000213981.jpeg" width="900" height="1600" loading="lazy" decoding="async" alt="A side view of the temple beneath the evening sky" data-i18n-alt="gallery.newPhoto3981">
             </button>
         </div>
+        </section>
+        <section id="gallery-panel-2026" role="tabpanel" aria-labelledby="gallery-tab-2026" hidden>
+            <div class="gallery gallery-2026"></div>
+        </section>
     </main>
     <dialog class="lightbox" id="lightbox" aria-label="Photo viewer" data-i18n-aria-label="gallery.viewer">
         <button class="lightbox-close" type="button" aria-label="Close photo" data-i18n-aria-label="gallery.close">&times;</button>

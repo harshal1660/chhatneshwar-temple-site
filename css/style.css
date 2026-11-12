@@ -520,6 +520,34 @@ h1 {
 	column-gap: 1rem;
 }
 
+.gallery-years {
+	display: flex;
+	gap: 0.25rem;
+	width: fit-content;
+	margin: 0 0 1.25rem;
+	padding: 0.25rem;
+	border: 1px solid rgb(105 58 40 / 16%);
+	border-radius: 6px;
+	background: var(--glass-surface);
+}
+
+.gallery-years button {
+	min-width: 4.5rem;
+	min-height: 2.5rem;
+	padding: 0.4rem 0.8rem;
+	border: 0;
+	border-radius: 4px;
+	background: transparent;
+	color: var(--color-temple-dark);
+	cursor: pointer;
+	font: 700 0.95rem Arial, sans-serif;
+}
+
+.gallery-years button[aria-selected="true"] {
+	background: var(--color-temple);
+	color: white;
+}
+
 .gallery-item {
 	position: relative;
 	display: inline-block;
@@ -542,6 +570,24 @@ h1 {
 	height: auto;
 	border-radius: inherit;
 	transition: transform 300ms ease;
+}
+
+.gallery-video {
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 1rem;
+	overflow: hidden;
+	break-inside: avoid;
+	border: 1px solid var(--glass-border);
+	border-radius: 6px;
+	background: var(--glass-surface);
+	box-shadow: var(--shadow-glossy);
+}
+
+.gallery-video video {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .gallery-item:hover img {
