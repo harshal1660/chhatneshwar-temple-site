@@ -374,7 +374,7 @@ function syncAutoplay() {
     }
 
     if (shouldRotate && slides.length > 1) {
-        autoplayTimer = window.setInterval(() => showSlide(currentSlide + 1), 6000);
+        autoplayTimer = window.setInterval(() => showSlide(currentSlide + 1), 2000);
     }
 }
 
@@ -395,6 +395,7 @@ document.querySelectorAll(".year").forEach((element) => {
     element.textContent = new Date().getFullYear();
 });
 
+/*
 const qrToggle = document.querySelector(".qr-toggle");
 const qrCard = document.querySelector("#qr-card");
 
@@ -406,6 +407,7 @@ qrToggle?.addEventListener("click", () => {
     qrToggle.setAttribute("aria-label", translate(key));
     if (qrCard) qrCard.hidden = expanded;
 });
+*/
 
 const gallery = document.querySelector(".gallery");
 const lightbox = document.querySelector("#lightbox");
